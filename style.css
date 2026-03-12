@@ -4,6 +4,9 @@ body {
 }
 
 nav {
+    font-family: sans-serif;
+    font-size: 14px;
+
     background-color: #1E293B;
     border-radius: 30px;
     width: 30vw; /* Thu nhỏ lại một chút để trông gọn khi chưa hover */
