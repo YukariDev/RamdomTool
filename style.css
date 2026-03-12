@@ -1,6 +1,30 @@
 body {
     background-color:#0F172A;
     padding: 15px;
+    
+}
+
+hr {
+  border: none;            /* Bỏ border mặc định */
+  height: 3px;             /* Độ dày của đường kẻ */
+  background-color: #1E293B; /* Màu sắc */
+  width: 50%;              /* Độ dài (50% chiều ngang thẻ cha) */
+  margin: 20px auto;       /* Căn giữa và tạo khoảng cách trên dưới */
+}
+
+.cre {
+    font-family: sans-serif;
+    font-size: 14px;
+
+    position: fixed;
+    left: 50%;
+    bottom: 93%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 nav {
@@ -8,7 +32,7 @@ nav {
     font-size: 14px;
 
     background-color: #1E293B;
-    border-radius: 30px;
+    border-radius: 50px;
     width: 30vw; /* Thu nhỏ lại một chút để trông gọn khi chưa hover */
     height: 50px;
     padding: 10px 20px;
@@ -105,4 +129,26 @@ nav:hover .btn-action {
     background-color: #ffc421;
     border-radius: 2px;
     box-shadow: 0 0 8px #ffc421;
+}
+
+.option_mode_page {
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: #1E293B;
+    border-radius: 12px;
+    width: 85vw;
+    height: 100px;
+    padding: 10px 20px;
+    
+    /* Căn giữa */
+    position: fixed;
+    left: 50%;
+    bottom: 75%; /* Chỉnh lại cho dễ nhìn hơn 80% */
+    transform: translateX(-50%);
+    
+    /* Nếu muốn chữ bên trong cũng nằm giữa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
