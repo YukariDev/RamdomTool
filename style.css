@@ -13,12 +13,12 @@ hr {
 }
 
 .cre_link {
-    text-decoration: none; /* Bỏ gạch chân */
-    color: inherit;        /* Giữ màu chữ giống thẻ h4 gốc */
+    text-decoration: none;
+    color: inherit;
 }
 
 .cre_link:hover {
-    color: rgb(255, 0, 89);           /* Đổi màu khi di chuột vào để người dùng biết đó là link */
+    color: rgb(255, 0, 89);
     text-decoration: none;
 }
 

@@ -5,9 +5,11 @@ const indicator = document.querySelector('.nav-indicator');
 function moveIndicator(anchorElement) {
     // Lấy phần tử <li> chứa thẻ <a> này
     const parentLi = anchorElement.parentElement;
+    
     // Tính toán chiều rộng và vị trí lề trái của <li> so với <ul>
     const width = parentLi.offsetWidth;
     const left = parentLi.offsetLeft;
+
     // Cập nhật indicator
     indicator.style.width = `${width}px`;
     indicator.style.transform = `translateX(${left}px)`;
@@ -26,8 +28,10 @@ links.forEach(link => {
     link.addEventListener('click', function(e) {
         // Xóa class active cũ
         links.forEach(item => item.classList.remove('active'));
+
         // Thêm class active vào thẻ vừa click
         this.classList.add('active');
+
         // Di chuyển thanh trượt
         moveIndicator(this);
     });
