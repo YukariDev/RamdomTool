@@ -12,6 +12,16 @@ hr {
   margin: 20px auto;       /* Căn giữa và tạo khoảng cách trên dưới */
 }
 
+.cre_link {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: inherit;        /* Giữ màu chữ giống thẻ h4 gốc */
+}
+
+.cre_link:hover {
+    color: rgb(255, 0, 89);           /* Đổi màu khi di chuột vào để người dùng biết đó là link */
+    text-decoration: none;
+}
+
 .cre {
     font-family: sans-serif;
     font-size: 14px;
