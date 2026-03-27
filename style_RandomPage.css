@@ -7,13 +7,11 @@
     height: 100px;
     padding: 10px 20px;
     
-    /* Căn giữa */
     position: fixed;
     left: 50%;
-    bottom: 75%; /* Chỉnh lại cho dễ nhìn hơn 80% */
+    bottom: 75%;
     transform: translateX(-50%);
     
-    /* Nếu muốn chữ bên trong cũng nằm giữa */
     display: flex;
     justify-content: center;
     align-items: center;

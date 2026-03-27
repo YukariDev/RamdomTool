@@ -2,7 +2,6 @@ const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.nav-links a');
 const indicator = document.querySelector('.nav-indicator');
 
-// --- PHẦN THÊM MỚI: Lấy các phần tử trang ---
 const pages = [
     document.querySelector('.hidden_Random_Page'),
     document.querySelector('.hidden_Setting_Page'),

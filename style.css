@@ -5,11 +5,11 @@ body {
 }
 
 hr {
-  border: none;            /* Bỏ border mặc định */
-  height: 3px;             /* Độ dày của đường kẻ */
-  background-color: #1E293B; /* Màu sắc */
-  width: 50%;              /* Độ dài (50% chiều ngang thẻ cha) */
-  margin: 20px auto;       /* Căn giữa và tạo khoảng cách trên dưới */
+  border: none;
+  height: 3px;
+  background-color: #1E293B;
+  width: 50%;
+  margin: 20px auto;
 }
 
 /* Ẩn các trang mặc định, trang chủ sẽ được JS cho hiện sau khi load */
