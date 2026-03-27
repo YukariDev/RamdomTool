@@ -2,37 +2,56 @@ const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.nav-links a');
 const indicator = document.querySelector('.nav-indicator');
 
+// --- PHẦN THÊM MỚI: Lấy các phần tử trang ---
+const pages = [
+    document.querySelector('.hidden_Random_Page'),
+    document.querySelector('.hidden_Setting_Page'),
+    document.querySelector('.hidden_Advanced_Page')
+];
+
+function showPage(index) {
+    // Ẩn tất cả các trang trước
+    pages.forEach(page => {
+        if (page) page.style.display = 'none';
+    });
+    // Hiện trang tương ứng với vị trí nút được nhấn
+    if (pages[index]) {
+        pages[index].style.display = 'block';
+    }
+}
+// ------------------------------------------
+
 function moveIndicator(anchorElement) {
-    // Lấy phần tử <li> chứa thẻ <a> này
     const parentLi = anchorElement.parentElement;
-    
-    // Tính toán chiều rộng và vị trí lề trái của <li> so với <ul>
     const width = parentLi.offsetWidth;
     const left = parentLi.offsetLeft;
 
-    // Cập nhật indicator
     indicator.style.width = `${width}px`;
     indicator.style.transform = `translateX(${left}px)`;
 }
 
-// 1. Khởi tạo vị trí mặc định khi trang web vừa tải xong
 window.addEventListener('load', () => {
     const activeLink = document.querySelector('.nav-links a.active');
     if (activeLink) {
         moveIndicator(activeLink);
+        
+        // Khởi tạo trang mặc định (Trang chủ - index 0)
+        showPage(0); 
     }
 });
 
-// 2. Xử lý khi click
-links.forEach(link => {
+links.forEach((link, index) => { // Thêm tham số index vào đây
     link.addEventListener('click', function(e) {
-        // Xóa class active cũ
-        links.forEach(item => item.classList.remove('active'));
+        // Ngăn chặn hành động mặc định của thẻ a
+        e.preventDefault();
 
-        // Thêm class active vào thẻ vừa click
+        links.forEach(item => item.classList.remove('active'));
         this.classList.add('active');
 
-        // Di chuyển thanh trượt
         moveIndicator(this);
+
+        // --- PHẦN THÊM MỚI: Gọi hàm hiện trang ---
+        showPage(index);
+        // ------------------------------------------
     });
 });

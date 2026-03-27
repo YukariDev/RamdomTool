@@ -12,6 +12,18 @@ hr {
   margin: 20px auto;       /* Căn giữa và tạo khoảng cách trên dưới */
 }
 
+/* Ẩn các trang mặc định, trang chủ sẽ được JS cho hiện sau khi load */
+.hidden_Random_Page, 
+.hidden_Setting_Page, 
+.hidden_Advanced_Page {
+    display: none;
+}
+
+/* Bạn có thể dùng class chung này để điều khiển bằng JS */
+.is-hidden {
+    display: none !important;
+}
+
 .cre_link {
     text-decoration: none;
     color: inherit;
@@ -31,131 +43,6 @@ hr {
     bottom: 93%;
     transform: translateX(-50%);
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-nav {
-    font-family: sans-serif;
-    font-size: 14px;
-
-    background-color: #1E293B;
-    border-radius: 50px;
-    width: 30vw; /* Thu nhỏ lại một chút để trông gọn khi chưa hover */
-    height: 50px;
-    padding: 10px 20px;
-    
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    display: flex;
-    justify-content: space-between; /* Đẩy các phần tử ra 2 đầu khi nav rộng ra */
-    align-items: center;
-    overflow: hidden; /* Đảm bảo nút không bị lòi ra ngoài khi nav đang ngắn */
-
-    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-nav:hover {
-    width: 40vw; /* Độ dài khi mở rộng để đủ chỗ cho 2 nút mới */
-    transform: translateX(-50%) scale(1.02);
-}
-
-/* Định dạng chung cho 2 nút Start/Reset */
-.btn-action {
-    opacity: 0;             /* Mặc định ẩn đi */
-    visibility: hidden;
-    padding: 5px 15px;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;    /* Không cho chữ bị xuống dòng */
-}
-
-/* Hiện nút khi hover vào nav */
-nav:hover .btn-action {
-    opacity: 1;
-    visibility: visible;
-}
-
-.btn-start {
-    background-color: #22C55E; /* Màu xanh lục */
-}
-
-.btn-start:hover {
-    background-color: #16a34a;
-    box-shadow: 0 0 10px #22C55E;
-}
-
-.btn-reset {
-    background-color: #EF4444; /* Màu đỏ */
-}
-
-.btn-reset:hover {
-    background-color: #dc2626;
-    box-shadow: 0 0 10px #EF4444;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    position: relative; /* Cực kỳ quan trọng: Làm mốc cho indicator */
-}
-
-.nav-links li {
-    display: inline-block; /* Để các li nằm trên một hàng */
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #F8FAFC;
-    font-weight: 500;
-    padding: 5px 0;
-    cursor: pointer;
-    display: block;
-    transition: color 0.3s;
-}
-
-.nav-indicator {
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    height: 3px;
-    background-color: #ffc421;
-    border-radius: 2px;
-    box-shadow: 0 0 8px #ffc421;
-    /* Hiệu ứng đàn hồi */
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    pointer-events: none; /* Tránh việc thanh này đè lên làm khó click nút */
-}
-
-.option_mode_page {
-    font-family: sans-serif;
-    font-size: 14px;
-    background-color: #1E293B;
-    border-radius: 12px;
-    width: 85vw;
-    height: 100px;
-    padding: 10px 20px;
-    
-    /* Căn giữa */
-    position: fixed;
-    left: 50%;
-    bottom: 75%; /* Chỉnh lại cho dễ nhìn hơn 80% */
-    transform: translateX(-50%);
-    
-    /* Nếu muốn chữ bên trong cũng nằm giữa */
     display: flex;
     justify-content: center;
     align-items: center;

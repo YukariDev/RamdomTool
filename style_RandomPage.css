@@ -1,0 +1,21 @@
+.random_Page {
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: #1E293B;
+    border-radius: 12px;
+    width: 95vw;
+    height: 100px;
+    padding: 10px 20px;
+    
+    /* Căn giữa */
+    position: fixed;
+    left: 50%;
+    bottom: 75%; /* Chỉnh lại cho dễ nhìn hơn 80% */
+    transform: translateX(-50%);
+    
+    /* Nếu muốn chữ bên trong cũng nằm giữa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
